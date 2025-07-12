@@ -1,0 +1,26 @@
+# Carpetas de entorno virtual
+venv/
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos temporales del sistema
+*.log
+*.sqlite
+*.db
+.DS_Store
+Thumbs.db
+
+# Archivos y carpetas de desarrollo
+.idea/
+.vscode/
+*.swp
+
+# Archivos del sistema operativo
+ehthumbs.db
+desktop.ini
+
+# node_modules del frontend (si usas multistage build no necesitas copiar esto)
+frontend/node_modules

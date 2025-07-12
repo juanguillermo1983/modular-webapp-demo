@@ -111,3 +111,78 @@ Respuesta exitosa (muestra las primeras 10 filas):
 ]
 
 ```
+
+
+
+# 🚀 Instrucciones para construir e iniciar el proyecto con Docker Compose
+
+## 🐳 1. Requisitos previos
+
+- Tener instalado Docker y Docker Compose.
+- Estar ubicado en el directorio raíz del proyecto (`modular-webapp-demo`).
+
+## 📁 Estructura esperada del proyecto
+
+```
+modular-webapp-demo/
+├── backend/
+│   ├── main.py
+│   ├── auth.py
+│   ├── files.py
+│   ├── database.py
+│   ├── ...
+│   └── requirements.txt
+├── frontend/
+│   ├── src/
+│   ├── index.html
+│   ├── package.json
+│   └── ...
+├── docker-compose.yml
+├── .dockerignore
+└── README.md
+```
+
+## ⚙️ 2. Construir los contenedores
+
+```bash
+docker-compose build
+```
+
+Esto construirá las imágenes para `backend` y `frontend`.
+
+## 🚀 3. Levantar los servicios
+
+```bash
+docker-compose up
+```
+
+Esto iniciará los servicios definidos en `docker-compose.yml`.
+
+- El **backend** estará disponible en: [http://localhost:8000](http://localhost:8000)
+- El **frontend** estará disponible en: [http://localhost:5173](http://localhost:5173)
+
+## 🧪 4. Probar que el backend responde
+
+Login:
+
+```bash
+curl -X POST http://localhost:8000/login \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "username=demo&password=demo"
+```
+
+## 🛑 5. Detener los servicios
+
+Presiona `Ctrl + C` o en otra terminal:
+
+```bash
+docker-compose down
+```
+
+---
+
+## 🐞 Problemas comunes
+
+- Si el backend no responde, revisa que `main.py` esté configurado correctamente.
+- Si hay error CORS en el frontend, asegúrate de que `main.py` tenga correctamente el middleware de CORS.
+- Verifica puertos expuestos correctamente en `docker-compose.yml`.
