@@ -1,5 +1,7 @@
 # modular-webapp-demo
 
+![Gráfico de ejemplo](./grafico.png)
+
 # Procedimiento para crear, iniciar y detener el entorno virtual
 
 Este proyecto utiliza un entorno virtual para gestionar las dependencias de Python de manera aislada. A continuación se detallan los pasos para crear, activar y desactivar el entorno virtual en tu máquina.

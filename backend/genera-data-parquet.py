@@ -8,7 +8,7 @@ import os
 os.makedirs("data", exist_ok=True)
 
 # Número de registros
-N = 100
+N = 100_000
 
 # Rango de fechas (timestamps aleatorios)
 start_date = pd.Timestamp("2023-01-01")

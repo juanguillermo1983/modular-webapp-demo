@@ -8,7 +8,7 @@ def process_parquet():
     path = os.path.join(DATA_DIR, "serie_dolar_2023_2025.parquet")
     try:
         df = pd.read_parquet(path)
-        return df.head(10).to_dict(orient="records")
+        return df.head(1000).to_dict(orient="records")
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error al procesar parquet: {str(e)}")
 
